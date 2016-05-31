@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DcbglMapper">
+
+
+	<select id="findlistPage" parameterType="page" resultType="pd">
+		select	
+			a.id as "id",
+			a.bt as "bt",
+			a.code as "code",
+			a.html as "html",
+			a.lx as "lx",
+			a.bz as "bz",
+			a.dqsj as "dqsj",
+			a.zdybm as "zdybm",
+			a.field as "field",
+			a.text as "text",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj",
+			b.name as "tjrmc"
+			from yrxx_dcb_dcbgl a
+			left join sys_user b on a.tjr=b.user_id
+			where 1=1
+			<if test="pd.bt != null and pd.bt != ''">
+	       	    and a.bt like CONCAT('%',#{pd.bt}, '%') 
+	        </if>
+			order by a.tjsj desc
+	</select>
+
+	
+	<select id="findInfo" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.bt as "bt",
+			a.code as "code",
+			a.html as "html",
+			a.lx as "lx",
+			a.bz as "bz",
+			a.dqsj as "dqsj",
+			a.zdybm as "zdybm",
+			a.field as "field",
+			a.text as "text",
+			a.activiti_key as "activiti_key",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj",
+			b.name as "tjrmc"
+			from yrxx_dcb_dcbgl a
+			left join sys_user b on a.tjr=b.user_id
+			where a.id=#{id}
+	</select>
+	
+	
+	<select id="findZdydcblistPage" parameterType="page" resultType="pd">
+		select a.*,b.name as "yhmc" from ${pd.table} a
+			left join sys_user b on a.yhid=b.user_id
+		 	order by tjsj desc 
+	</select>
+	
+	
+	
+	<select id="findMyDcbxxlistPage" parameterType="page" resultType="pd">
+		select	
+			a.id as "id",
+			a.bt as "bt",
+			a.code as "code",
+			a.html as "html",
+			a.lx as "lx",
+			a.bz as "bz",
+			a.dqsj as "dqsj",
+			a.zdybm as "zdybm",
+			a.field as "field",
+			a.text as "text",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj",
+			b.name as "tjrmc"
+			from yrxx_dcb_dcbgl a
+			left join sys_user b on a.tjr=b.user_id
+			where a.yhids like CONCAT('%',#{pd.yhid}, '%') 
+	</select>
+	
+	<select id="findMyDcbInfo" parameterType="pd" resultType="pd">
+		select a.*,b.name as "yhmc",c.bt,c.dqsj,c.field,c.text from ${table} a
+			left join sys_user b on a.yhid=b.user_id
+			left join yrxx_dcb_dcbgl c on a.dcbid=c.id
+			where a.yhid=#{yhid}
+	</select>
+	
+	
+	<select id="findBdxxlistPage" parameterType="page" resultType="pd">
+		select a.*,b.name as "yhmc",c.bt,c.dqsj,c.field,c.text from ${pd.table} a
+			left join sys_user b on a.yhid=b.user_id
+			left join yrxx_dcb_dcbgl c on a.dcbid=c.id
+			where a.yhid=#{pd.yhid}
+	</select>
+	
+	
+	<select id="findBdxxInfo" parameterType="pd" resultType="pd">
+		select
+			*
+			from ${table} 
+			where id=#{bdid}
+	</select>
+	
+	
+	<delete id="remove" parameterType="pd">
+		delete from yrxx_dcb_dcbgl where id=#{id}
+	</delete>
+	
+</mapper>
+
+

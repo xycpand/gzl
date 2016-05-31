@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="WfuserMapper">
+
+	<select id="findlistPage" parameterType="page" resultType="pd">
+		select	
+			a.id as "id",
+			a.yhid as "yhid",
+			a.pid as "pid",
+			a.xgsj as "xgsj",
+			a.tjsj as "tjsj",
+			b.name as "name",
+			d.name as "pname"
+			from sys_workflow_user a
+			left join sys_user b on a.yhid=b.user_id
+			left join sys_workflow_user c on a.pid=c.id
+			left join sys_user d on c.yhid=d.user_id
+			where 1=1
+			<if test="pd.name != null and pd.name != '' ">
+		 		 and a.name = #{pd.name}
+		 	</if>
+		 	<if test="pd.pid != null and pd.pid != '' ">
+		 		 and a.pid = #{pd.pid}
+		 	</if>
+			order by a.xgsj desc
+	</select>
+	
+	
+	<select id="findList" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.yhid as "yhid",
+			a.pid as "pid",
+			a.xgsj as "xgsj",
+			a.tjsj as "tjsj",
+			b.name as "name",
+			d.name as "pname"
+			from sys_workflow_user a
+			left join sys_user b on a.yhid=b.user_id
+			left join sys_workflow_user c on a.pid=c.id
+			left join sys_user d on c.yhid=d.user_id
+			where 1=1
+			<if test="name != null and name != '' ">
+		 		 and a.name = #{name}
+		 	</if>
+		 	<if test="pid != null and pid != '' ">
+		 		 and a.pid = #{pid}
+		 	</if>
+			order by a.xgsj desc
+	</select>
+	
+	
+	<select id="findInfo" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.yhid as "yhid",
+			a.pid as "pid",
+			a.xgsj as "xgsj",
+			a.tjsj as "tjsj",
+			b.name as "name",
+			d.name as "pname"
+			from sys_workflow_user a
+			left join sys_user b on a.yhid=b.user_id
+			left join sys_workflow_user c on a.pid=c.id
+			left join sys_user d on c.yhid=d.user_id
+			where a.id=#{id}
+	</select>
+	
+
+	<insert id="save" parameterType="pd">
+		insert into sys_workflow_user 
+			(id,yhid,pid,tjsj,xgsj)
+			values
+			(#{id},#{yhid},#{pid},#{tjsj},#{xgsj})
+	</insert>
+	
+	<update id="update" parameterType="pd">
+		update sys_workflow_user set
+			<if test="yhid != null and yhid != '' ">
+				yhid = #{yhid},
+			</if>
+				xgsj = #{xgsj}
+			<if test="id != null and id != '' ">
+				where id=#{id}
+			</if>
+	</update>
+	
+	<delete id="remove" parameterType="pd">
+		delete from sys_workflow_user where id=#{id}
+	</delete>
+	
+	
+	<select id="findUser" parameterType="pd" resultType="pd">
+		select 
+			a.user_id as "id",
+			a.name as "name",
+			b.id
+			from sys_user a
+			left join sys_workflow_user b on a.user_id=b.yhid
+			where b.id='' or b.id is null
+			order by a.number asc
+	</select>
+	
+	
+</mapper>
+
+

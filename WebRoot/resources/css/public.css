@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px Arial, Helvetica, sans-serif; background:#f7f7f7; min-width:1200px; }
+a{color:#333333;text-decoration:none;}
+a:hover{color:#d00;}
+.clear{ clear:both;}
+.fl{ float:left;}
+.fr{ float:right;}
+input:-webkit-autofill { 
+-webkit-box-shadow: 0 0 0px 1000px #fff inset; 
+}
+
+/*top*/
+.top{ height:62px;width:1200px; margin:0 auto;padding-top:10px;}
+.logo{ width:240px;}
+.topnav{ width:700px; margin-left:70px; margin-top:10px;}
+
+.tel{ width:190px;}
+.tel p{ padding-top:10px;}
+
+.navbg a{ background:#ffc600;color:#FFF;border-radius:5px;}
+
+
+
+/* menu */
+.menu2{height:45px;overflow:hidden;}
+.menu2 ul li{float:left;position:relative;text-align:center;line-height:45px;height:45px;overflow:hidden; }
+.menu2 ul li a{position:relative;/* 必要元素 */display:block;width:100px;height:45px;font-size:14px;text-decoration:none;cursor:pointer;font-family: 微软雅黑;}
+.menu2 ul li a span{position:absolute;/* 必要元素 */left:0;width:100px;}
+.menu2 ul li a span.out{top:0px;}
+.menu2 ul li a span.over,.menu ul li a span.bg{top:-45px;}
+/* 实例二 */
+#menu2 ul li a{color:#000;}
+#menu2 ul li a span.over{background:#ffc600;color:#FFF;border-radius:5px;}
+/*footer*/
+.footer{ width:100%; background:#454545;margin:0 auto;}
+.footcont{ width:1200px; margin:0 auto;}
+.footcont ul{ width:150px; float:left; padding-left:40px;padding-right:40px;  padding-top:10px; margin-top:10px; height:230px;}
+.footcont ul li{ line-height:30px; font-family:"微软雅黑";}
+.footcont ul li h3{ color:#fff; line-height:40px; font-size:16px;}
+.footcont ul li a{ color: #E2E2E2;}
+.footbottom{ width:1200px; margin:0 auto; text-align:center; line-height:30px; color:#fff; }
+.hotbarand{width:1200px; margin:0 auto; }
+.yqlj{  line-height:30px; float:left; color:#999; margin-left:40px; border-top:1px solid #999; width:1110px;}
+.STYLE2{ border-left:5px solid #ffbb00; text-indent:10px; font-size:18px;font-family:"微软雅黑"; }
+.yqlj span{ margin-left:10px;}
+.yqlj a{ color:#999;}
+.yqlj a:hover{ color:#ccc;}
+
+*html{background-image:url(about:blank);background-attachment:fixed;}/*解决IE6下滚动抖动的问题*/
+#tbox{width:54px; float:right; position:fixed; right:10px; bottom:15px;
+_position:absolute;
+_bottom:auto;
+_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0)));
+_margin-bottom:15px;
+}/*解决IE6下不兼容 position:fixed 的问题*/
+#pinglun,#xiangguan,#gotop{ width:54px; height:56px; background:url(../img/icon.png) no-repeat; display:block;}
+#pinglun{ background-position:0 0;}
+#xiangguan{ background-position:0 -59px;}
+#gotop{ background-position:0 -118px;} 

@@ -1,0 +1,256 @@
+z@charset "utf-8";
+/*帮你省钱*/
+
+.help-banner img{ width:100%;height:487px;}
+.help-help{
+	width:1349px;
+	height:20px;
+	background:url("../img/help-help.jpg") no-repeat;
+	background-size:240px 20px;
+	background-position:center 40px;
+}
+.help-wenzi{
+	width:713px;
+	margin-top:15px;
+	font-size:20px;
+	color:#ffff;
+
+	padding-left:636px;
+	font-family:"微软雅黑";
+}
+.help-wenzi img{
+	padding-left: 485px;
+}
+.help-tupian{
+	width:1200px;
+	margin:30px auto 0px;
+}
+.help-tupian .tpone{
+	float:left;
+	width:360px;
+	height:390px;
+	background-color:#f5f5f5;
+	position:relative;
+}
+.help-tupian .tpone:hover,.tptwo:hover{box-shadow: 0 0 8px #999;}
+.help-tupian .tpones img{
+	width:360px;
+	height:218px;
+}
+.help-tupian .tponefor img{
+	width:354px;
+	height:218px;
+}
+.help-tupian .tponefor{
+	float:left;
+	width:354px;
+	height:384px;
+	background-color:#f5f5f5;
+	position:relative;
+	border:3px solid #ffb200;
+}
+.help-tupian .tpone .tponess{
+	padding:25px;
+}
+.help-tupian .tponefor .tponess{
+	padding:25px;
+}
+.help-tupian .arrow{
+	width:0; 
+	height:0; 
+	border-bottom:10px solid #f5f5f5;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent; 
+	position:absolute; 
+	left:20px; 
+	top:208px;
+}
+.tponess p{
+	font-size:12px;
+	margin-top:20px;
+	line-height:24px;max-height: 70px;
+}
+.tponess span{
+	display:block;
+	margin-top:20px;
+	font-size:12px;
+	font-weight:bold;
+}
+.tponess a:hover{
+	color:#ffb200;
+}
+.help-tupian .tptwo{
+	float:left;
+	width:360px;
+	height:390px;
+	margin-left:60px;
+	background-color:#f5f5f5;
+	position:relative;
+	margin-bottom:40px;
+}
+.help-tupian .tptwofor{
+	float:left;
+	width:358px;
+	height:388px;
+	margin-left:60px;
+	background-color:#f5f5f5;
+	position:relative;
+	border:1px solid #ffb200;
+}
+.help-tupian .tptwofor img{
+	width:354px;
+	height:218px;
+}
+.help-tupian .tptwo .tponess{
+	padding:25px;
+}
+.help-tupian .tptwofor .tponess{
+	padding:25px;
+}
+
+.help-group{
+	width:1200px;
+	height:630px;
+	background-color:#f5f5f5;
+	margin:30px auto 0;
+}
+.help-groups{
+	width:1200px;
+	height:62px;
+	background:url("../img/help-group.jpg") no-repeat center;
+	background-size:246px 22px;
+	background-position:center 40px;
+}
+.help-groupss{
+	width:630px;
+	margin-top:15px;
+	font-size:20px;
+	color:#ffff;
+	padding-left:570px;
+	font-family:"微软雅黑";
+}
+.help-groupss img{
+	float:right;
+	padding-right:20px;
+}
+.help-groupimg{
+	float:left;
+	margin-left:50px;
+	width:335px;
+	height:480px;
+	background-color:#ffffff;
+}
+
+
+.help-fqzt{
+	width:1349px;
+	height:60px;
+	background:url("../img/help-fqzt.jpg") no-repeat;
+	background-size:125px 22px;
+	background-position:center 40px;
+}
+.help-groupli li{ width:330px; background:#fff; margin-left:50px; float:left; margin-top:20px;margin-bottom: 20px;}
+.help-groupli li img {
+width: 330px;
+height: 280px;
+}
+.help-groupli p{ padding:10px;}
+.help-groupli li:hover{box-shadow: 0 0 8px #999; }
+.help-groupli button{ height:40px; line-height:40px; width:330px; font-size:18px;text-align:center; border:none; outline:none; cursor:pointer; background:url(../img/buttonbg.png); color:#FFFFFF; margin-top:17px;}
+.help_bg{ background:url(../img/money_bg.png) no-repeat; width:130px; height:35px; position:relative; top:-284px; }
+.help_bg p{ text-align:center; color:#FFFFFF; width:100px;font-family:"微软雅黑"; font-size:16px;}
+.tgj{ font-family: 微软雅黑;
+font-size: 22px;
+font-weight: 600; color:#FF9900; margin-top:-30px;}
+.js{ font-size:16px; font-family:"微软雅黑";}
+.customcenter{width:960px;background-color:white;margin:0 auto 0;}
+.customcenter .form{width:870px;background:#fff;margin:0 auto;padding:40px 0 0px;}
+.customcenter .form ul{width:450px;margin:0 auto;}
+.customcenter .form label{width:5em;float:left;margin-left:-6em;font-size:14px;line-height:2em;text-align:right;}
+.customcenter .form label .red{color:#f00;}
+.customcenter .form li{padding-left:6em;font-size:14px;line-height:1em;padding-bottom:15px;}
+.customcenter .form input[type='text']{width:330px;padding:8px 5px;font-size:14px;border:1px solid #ddd;vertical-align:middle;}
+.customcenter .form input[type='radio']{margin: 8px 5px 10px 0;vertical-align:middle;}
+.customcenter .form textarea{width:330px;padding:8px 5px;height:100px;font-size:14px;border:1px solid #ddd;resize:none;}
+.customcenter .form li.jgqj input[type='text']{width:120px;}
+.customcenter .form li.jgqj span.s1{padding:0 10px;}
+.customcenter .form li.yzm input[type='text']{width:200px;}
+
+.customcenter .form .yzmBtn{border-width:0;background:#f90;color:#fff;display:inline-block;vertical-align:middle;line-height:36px;margin-left:10px;width:120px;text-align:center;}
+.customcenter .form input[type='submit']{cursor:pointer;font-size:18px;background:url(../img/css_spride.png) 0 -876px no-repeat;width:184px;height:46px;border-width:0;color:#fff;}
+.customcenter .form li.submit{padding-top:20px;padding-left:10rem;}
+.customcenter .tel{width:870px;margin:0 auto;background:#eeeeee;font-size:18px;text-align:center;line-height:1em;padding:15px 0;}
+.customcenter .tel span{color:#dc0000;}
+.customcenter .list{padding:190px 0 80px 120px;}
+.customcenter .list li{float:left;width:190px;font-size:0;line-height:0;text-align:center;margin:0 60px;}
+.customcenter .list li h4{font-size:18px;line-height:1em;color:#ccc;font-weight:normal;margin-bottom:10px;}
+.customcenter .list li p{font-size:12px;line-height:1.2em;color:#999;}
+/*结束*/
+
+#cdForm select{ margin-right:10px; margin-bottom:10px;height: 30px;}
+#cdForm select option{ height:30px;}
+
+
+/*建议开始*/
+.complainWin {
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+    width: 470px;
+}
+.complainWin .tit {
+    background: #eeeeee none repeat scroll 0 0;
+    font-size: 16px;
+    line-height: 1em;
+    padding: 15px;
+}
+.complainWin ul {
+    padding: 0px 50px;
+    list-style:none;
+}
+.complainWin li {
+    font-size: 14px;
+    line-height: 1em;
+    padding: 10px 0 0;
+}
+.complainWin textarea {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 12px;
+    height: 150px;
+    padding: 10px;
+    resize: none;
+    width: 100%;
+}
+.complainWin input[type="text"] {
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 6px;
+    width: 100%;
+}
+.complainWin input[type="submit"] {
+    background: #d70000 none repeat scroll 0 0;
+    border-bottom: 0 solid #b50000;
+    border-radius: 4px;
+    border-width: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 200px;
+}
+.complainWin .tip {
+    left: 50px;
+    position: absolute;
+    top: 55px;
+}
+.success1 {
+    display: none;
+    padding: 100px 0;
+    text-align: center;
+    display:none
+}
+
+/*建议结束*/

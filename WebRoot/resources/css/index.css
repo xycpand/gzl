@@ -1,0 +1,473 @@
+@charset "utf-8";
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+a:hover{color:#d00;}
+.content{ width:1200px; margin:0 auto; padding-top:10px; padding-bottom:10px;}
+ul, ol, li {list-style-type:none;vertical-align:0}
+.menu {
+	width: 240px;
+	background-color: #fff;
+}
+.menu h1 {
+	border: 1px solid #dbdbdb;
+	color:#fff;
+	font-size: 14px;
+	line-height: 35px;
+	height: 35px;
+	padding-left: 80px;
+	background-color: #000; font-family:"微软雅黑";
+}
+.xia_icon1{ cursor:pointer;}
+.menu ul {
+}
+.menu ul li {
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #5b5b5b;
+	border-left-color: #dbdbdb;
+	height: 35px;
+	position: relative;
+	color: #336699;
+	float: left;
+	width: 238px;
+	background:#484848;
+}
+.menu ul li span {
+	border-bottom-width: 1px;
+	font-size: 12px;
+	line-height:35px;
+	height: 35px;
+	cursor: pointer;
+	position: relative;
+	padding-left: 20px;
+	width: 190px;
+	display: block;
+}
+.menu ul li span img{
+	width:35px; height:30px; margin-top:3px;
+}
+.menu ul li span a{ color:#fff; float:left; margin-left:10px;}
+.menu ul li.this {
+	color: #f83100;
+	background-color: #f2f2f2;
+}
+.menu ul li.this a {
+	color: #f83100;
+
+}
+.menu ul li.this ol {
+	position: absolute;
+	display: block;width:690px; height:431px;
+}
+.menu ul li ol {
+	position: absolute;
+	left: 238px;
+	width: 250px;
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	
+	display: none;width:670px;
+}
+.menu ul li ol dl {
+	position: relative;
+	padding-right: 8px;
+	padding-bottom: 7px;
+	padding-left: 8px;
+	width:670px;
+}
+.menu ul li ol dd {
+	/*padding: 10px;*/
+	border: 1px solid #e1e1e1;
+	background-color: #fff; height:390px; overflow-y:scroll;
+}
+.menu ul li ol dd p{ float:left; text-align:center;border:1px solid transparent; width:208px;}
+.menu ul li ol dd p:hover{ border:1px solid #ff9900;}
+.menu ul li ol dd p img{ width:208px; height:110px;}
+.pplogo{ width:70px !important; height:60px !important;}
+.menu ul li ol dd p span{ margin-top:-12px; font-size:14px; font-family:"微软雅黑"}
+.menu ul li ol h2 {
+	line-height: 30px;
+	font-size: 12px;
+	height: 10px;
+}
+.gd{ width:100px !important; height:100px !important; margin:50px;}
+.menu ul li ol h2 em {
+	float: right;
+	font-weight: normal;
+	font-style: normal;
+	color: #777;
+	cursor: pointer;
+}
+.menu ul li ol small {
+	font-size: 0px;
+	line-height: 0px;
+	background-color: #f2f2f2;
+	display: block;
+	height: 29px;
+	width: 9px;
+	position: absolute;
+	top: 30px;
+	left: -9px;
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+
+<!--banner-->
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	zoom:1;
+}
+ul, li {
+	list-style:none;
+}
+img {
+	border:0;
+}
+
+/*.hd_left a:hover{ box-shadow:5px 5px 5px #ccc;}*/
+/* qqshop focus */
+#focus {
+	width: 680px;
+	height: 432px;
+	overflow: hidden;
+	position: relative;margin-left:10px;
+
+}
+#focus ul {
+	height:432px;
+	position:absolute;
+}
+#focus ul li {
+	float:left;
+	width:680px;
+	height:432px;
+	overflow:hidden;
+	position:relative;
+	background:#000;
+}
+#focus ul li img{ width:680px; height:432px;}
+#focus ul li div {
+	position:absolute;
+	overflow:hidden;
+}
+#focus .btnBg {
+	position:absolute;
+	width:680px;
+	height:20px;
+	left:0;
+	bottom:0;
+	background:#000;
+	display:none
+}
+#focus .btn {
+	position:absolute;
+	width:150px;
+	height:10px;
+	padding:5px 10px;
+	right:0;
+	bottom:7px;
+	text-align:right;
+}
+#focus .btn span {
+	display: inline-block;
+	_display: inline;
+	_zoom: 1;
+	width: 9px;
+	height: 9px;
+	_font-size: 0;
+	margin-left: 5px;
+	cursor: pointer;
+	background: url(../img/nbtn.png) no-repeat;
+}
+#focus .btn span.on {
+	background: url(../img/nhbtn.png) no-repeat;
+	height: 9px;
+	width: 9px;
+}
+#focus .preNext {
+	width: 35px;
+	height: 60px;
+	position: absolute;
+	top: 170px;
+	cursor: pointer;
+}
+#focus .pre {
+	left: 0;
+	background: url(../img/nl_btn.png) no-repeat;
+}
+#focus .next {
+	right: 0;
+	background: url(../img/nr_btn.png) no-repeat;
+}
+#focus .hover_pre {
+	background: url(../img/nhl_btn.png) no-repeat;
+}
+#focus .hover_next {
+	background: url(../img/nhr_btn.png) no-repeat;
+}
+#focus .imgTitleBg {
+	background: #000;
+	height: 36px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 800px;
+filter:alpha(opacity:60);
+	opacity:0.6;
+}
+#focus .imgTitle {
+	height: 36px;
+	position: absolute;
+	font-size: 14px;
+	line-height: 36px;
+	color: #FFF;
+	padding-left: 10px;
+	left: 0px;
+	bottom: 0px;
+}
+#focus .imgTitle a {
+	color: #FFF;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+
+.cont_right{ width:260px; height:100px; margin-left:10px; }
+
+.search input{ width:220px; height:30px; border:1px solid #ffbb00; float:left;line-height:30px; text-indent:10px; }
+.search button{ width:38px; height:32px; line-height:32px; text-align:center; background:#ffbb00; color:#fff; float:left; border:none; outline:none; cursor:pointer;}
+
+.fenl{ width:258px; border:1px solid #ddd; height:390px; margin-top:8px; background:#fff;}
+.fenl p{ line-height:35px; height:35px; background:#eee; font-size:16px; text-indent:20px;color:#666666;font-family:"微软雅黑"}
+.money li{ width:80px; line-height:30px; height:30px; float:left; text-align:center; color:#666;}
+.chexing li{ width:60px; float:left; text-align:center; color:#666;}
+.chexing span{ line-height:30px;}
+.chexi li{ width:120px;line-height:30px; height:30px; float:left; text-align:center; color:#666;}
+
+.fuwu{ height:75px; background:#FFFFFF;font-family:"微软雅黑";}
+.fuwu li{ margin-left:110px; padding-top:10px; font-size:18px; float:left;}
+.fuwu p{ margin-top:-50px; margin-left:80px;}
+/*活动*/
+.fuwu,.brand{ width:1200px; margin:0 auto; padding-bottom:10px;}
+.hd{ width:1200px; margin:0 auto; }
+.hd_left{ width:820px;}
+.hd_left img{width:820px; height:200px; margin-bottom:10px;}
+.hd_left img:hover{box-shadow: 0 0 8px #999;}
+.hd_right{ width:360px;}
+.hd_top{ width:360px; height:400px; background:#fff;margin-bottom:10px; padding-top:10px;}
+.hd_bottom{width:360px; height:400px; background:#fff; padding-top:10px; margin-top:18px;}
+.hd_top p,.hd_bottom p{ height:20px; line-height:20px; border-left:5px solid #ffbb00; margin-left:20px; text-indent:10px; font-size:18px;font-family:"微软雅黑"}
+.hd_top ul{margin-top:10px; margin-left:20px;}
+.hd_top li{ line-height:22px; margin-top:15px; }
+.STYLE1{background:#ccc; border-radius:50%; width:22px; height:22px; float:left; text-align:center; margin-right:10px; color:#fff;}
+.c1{background:#990000;}
+.c2{ background:#FF0000;}
+.c3{ background:#ffbb00;}
+
+.newbanner{ width:320px; height:180px; margin-left:20px;margin-top:10px;}
+.newbanner img{ width:320px; height:180px;}
+.newsli li{
+	list-style-type: disc; line-height:35px; margin-left:40px;
+}
+.newsli li a{ color:#333;}
+
+/*自驾游*/
+
+.zjy{ width:1200px; margin:0 auto; height:200px; padding-bottom:10px;}
+.zjy img{ width:1200px; height:200px;}
+
+
+.kuangj{ height:500px; width:432px; background:#fff;}
+.kuangj img{height:500px; width:432px; }
+.bb{border-bottom:1px solid #ccc;}
+.br{border-right:1px solid #ccc; }
+.kuangz{ width:510px; height:500px; background:#fff;}
+.kuangr{ width:255px; height:500px; background:#fff;}
+.kuangt{ height:249px;}
+.kuangbl{  width:254px; height:250px;}
+.kuangbr{ width:254px; height:250px;}
+
+.STYLE3{font-size:16px;font-family:"微软雅黑"; padding:20px; line-height:30px;}
+.brandimg{ width:200px; height:110px; padding-left:20px;}
+.brandimg1{ margin-left:180px;}
+
+
+/*焦点图 开始*/
+.indexFocus {
+	border:1px solid #CCC;
+	padding:2px;
+	width:320px;
+	height:185px;
+	margin:0 auto;
+	
+}
+.indexFocus .focusBox {
+	width:320px;
+	height:185px;
+	position:relative;
+	margin:0 auto;
+	position:relative
+}
+.indexFocus .focusBox .bigPic {
+	width:320px;
+	height:185px;
+	overflow:hidden;
+	position:relative
+}
+.indexFocus .focusBox .bigPic li {
+	width:320px;
+	height:185px
+}
+.indexFocus .focusBox .bigPic img {
+	width:320px;
+	height:185px
+}
+.indexFocus .focusBox .btn {
+	height:16px;
+	position:absolute;
+	right:8px;
+	bottom:4px;
+	z-index:11
+}
+.indexFocus .focusBox .btn ul li {
+	width:15px;
+	height:15px;
+	line-height:15px;
+	margin-right:2px;
+	display:block;
+	background:#fff;
+	float:left;
+	text-align:center;
+	cursor:pointer
+}
+.indexFocus .focusBox .btn .sel {
+	width:15px;
+	height:15px;
+	background:#B90101;
+	color:#fff
+}
+.indexFocus .focusBox .picText_bg {
+	width:100%;
+	height:26px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	background:#000;
+	filter:alpha(opacity=50); /*IE*/
+	-moz-opacity:0.5; /*MOZ , FF*/
+	opacity:0.5;/*CSS3, FF1.5*/
+}
+.indexFocus .focusBox .picText {
+	width:100%;
+	height:26px;
+	line-height:26px;
+	text-align:left;
+	font-weight:bold;
+	margin:0 auto;
+	position:absolute;
+	left:0;
+	bottom:0;
+	overflow:hidden;
+	z-index:10;
+}
+.indexFocus .focusBox .picText a {
+	padding-left:10px;
+	color:#fff;
+}
+</style>
+<style type="text/css">
+* {
+	padding:0;
+	margin:0;
+	font-size:12px;
+}
+ul, li {
+	list-style: none;
+}
+.indexFocus {
+	border:1px solid #CCC;
+	padding:2px;
+	width:320px;
+	height:185px;
+	margin:0 auto;
+}
+.indexFocus .focusBox {
+	width:320px;
+	height:185px;
+	position:relative;
+	margin:0 auto;
+	position:relative
+}
+.indexFocus .focusBox .bigPic {
+	width:320px;
+	height:185px;
+	overflow:hidden;
+	position:relative
+}
+.indexFocus .focusBox .bigPic li {
+	width:320px;
+	height:185px
+}
+.indexFocus .focusBox .bigPic img {
+	width:320px;
+	height:185px
+}
+.indexFocus .focusBox .btn {
+	height:16px;
+	position:absolute;
+	right:8px;
+	bottom:4px;
+	z-index:11
+}
+.indexFocus .focusBox .btn ul li {
+	width:15px;
+	height:15px;
+	line-height:15px;
+	margin-right:2px;
+	display:block;
+	background:#fff;
+	float:left;
+	text-align:center;
+	cursor:pointer
+}
+.indexFocus .focusBox .btn .sel {
+	width:15px;
+	height:15px;
+	background:#B90101;
+	color:#fff
+}
+.indexFocus .focusBox .picText_bg {
+	width:100%;
+	height:26px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	background:#000;
+	filter:alpha(opacity=50); /*IE*/
+	-moz-opacity:0.5; /*MOZ , FF*/
+	opacity:0.5;/*CSS3, FF1.5*/
+}
+.indexFocus .focusBox .picText {
+	width:100%;
+	height:26px;
+	line-height:26px;
+	text-align:left;
+	font-weight:bold;
+	margin:0 auto;
+	position:absolute;
+	left:0;
+	bottom:0;
+	overflow:hidden;
+	z-index:10;
+}
+.indexFocus .focusBox .picText a {
+	padding-left:10px;
+	color:#fff;
+}
+/*结束*/
+

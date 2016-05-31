@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="DqglMapper">
+
+	<select id="findlistPage" parameterType="page" resultType="pd">
+		select	
+			a.id as "id",
+			a.name as "name",
+			a.pid as "pid",
+			a.px as "px",
+			a.xgsj as "xgsj"
+			from sys_dqgl a
+			where 1=1
+			<if test="pd.name != null and pd.name != '' ">
+		 		 and a.name = #{pd.name}
+		 	</if>
+		 	<if test="pd.pid != null and pd.pid != '' ">
+		 		 and a.pid = #{pd.pid}
+		 	</if>
+			order by a.px asc,a.xgsj desc
+	</select>
+	
+	
+	<select id="findList" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.name as "name",
+			a.pid as "pid",
+			a.px as "px",
+			a.xgsj as "xgsj"
+			from sys_dqgl a
+			where 1=1
+			<if test="name != null and name != '' ">
+		 		 and a.name = #{name}
+		 	</if>
+		 	<if test="pid != null and pid != '' ">
+		 		 and a.pid = #{pid}
+		 	</if>
+			order by a.px asc,a.xgsj desc
+	</select>
+	
+	
+	<select id="findInfo" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.name as "name",
+			a.pid as "pid",
+			a.px as "px",
+			a.xgsj as "xgsj"
+			from sys_dqgl a
+			where a.id=#{id}
+	</select>
+	
+
+	<insert id="save" parameterType="pd">
+		insert into sys_dqgl 
+			(id,name,pid,px,xgsj)
+			values
+			(#{id},#{name},#{pid},#{px},#{xgsj})
+	</insert>
+	
+	<update id="update" parameterType="pd">
+		update sys_dqgl set
+			<if test="name != null and name != '' ">
+				name = #{name},
+			</if>
+			<if test="px != null and px != '' ">
+				px = #{px},
+			</if>
+				xgsj = #{xgsj}
+			<if test="id != null and id != '' ">
+				where id=#{id}
+			</if>
+	</update>
+	
+	<delete id="remove" parameterType="pd">
+		delete from sys_dqgl where id=#{id}
+	</delete>
+	
+	
+</mapper>
+
+

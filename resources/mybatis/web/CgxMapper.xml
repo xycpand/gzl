@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CgxMapper">
+
+
+	<select id="findlistPage" parameterType="page" resultType="pd">
+		select	
+			a.id as "id",
+			a.bt as "bt",
+			a.code as "code",
+			a.lx as "lx",
+			a.bz as "bz",
+			a.dqsj as "dqsj",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj",
+			b.name as "tjrmc"
+			from yrxx_dcb_cgx a
+			left join sys_user b on a.tjr=b.user_id
+			where 1=1
+			<if test="pd.bt != null and pd.bt != ''">
+	       	    and a.bt like CONCAT('%',#{pd.bt}, '%') 
+	        </if>
+			order by a.tjsj desc
+	</select>
+
+	
+	<select id="findInfo" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.bt as "bt",
+			a.code as "code",
+			a.lx as "lx",
+			a.bz as "bz",
+			a.dqsj as "dqsj",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj",
+			a.html as "html",
+			a.field as "field",
+			a.text as "text",
+			b.name as "tjrmc"
+			from yrxx_dcb_cgx a
+			left join sys_user b on a.tjr=b.user_id
+			where a.id=#{id}
+	</select>
+	
+	
+	<insert id="save" parameterType="pd">
+		insert into yrxx_dcb_cgx (id,bt,code,html,field,text,lx,bz,dqsj,tjr,tjsj,xgsj)
+			values
+			(#{id},#{bt},#{code},#{html},#{field},#{text},#{lx},#{bz},#{dqsj},#{tjr},#{tjsj},#{xgsj})
+	</insert>
+	
+	
+	<update id="update" parameterType="pd">
+		update yrxx_dcb_cgx set 
+			<if test="bt != null and bt != '' ">
+				bt = #{bt},
+			</if>
+			<if test="code != null and code != '' ">
+				code = #{code},
+			</if>
+			<if test="html != null and html != '' ">
+				html = #{html},
+			</if>
+			<if test="field != null and field != '' ">
+				field = #{field},
+			</if>
+			<if test="text != null and text != '' ">
+				text = #{text},
+			</if>
+			<if test="lx != null and lx != '' ">
+				lx = #{lx},
+			</if>
+			<if test="bz != null and bz != '' ">
+				bz = #{bz},
+			</if>
+			<if test="dqsj != null and dqsj != '' ">
+				dqsj = #{dqsj},
+			</if>
+				xgsj = #{xgsj}
+				where id=#{id}
+	</update>
+	
+	
+	<delete id="delete" parameterType="pd">
+		delete from yrxx_dcb_cgx where id=#{id}
+	</delete>
+	
+	
+	<select id="findYhxx" parameterType="pd" resultType="pd">
+		select 
+			a.user_id as "id",
+			a.username as "yhmc",
+			a.name as "name"
+			from sys_user a
+	</select>
+	
+	<insert id="saveForm" parameterType="pd">
+		insert into yrxx_dcb_dcbgl (id,bt,code,html,field,text,lx,bz,dqsj,zdybm,yhids,tjr,tjsj,xgsj,activiti_key)
+			values
+			(#{id},#{bt},#{code},#{html},#{field},#{text},#{lx},#{bz},#{dqsj},#{zdybm},#{yhids},#{tjr},#{tjsj},#{xgsj},#{activiti_key})
+	</insert>
+	
+</mapper>
+
+

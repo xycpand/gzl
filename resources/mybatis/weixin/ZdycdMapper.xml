@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ZdycdMapper">
+
+	<select id="findList" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.pid as "pid",
+			a.cdmc as "cdmc",
+			a.lx as "lx",
+			a.url as "url",
+			a.eventkey as "eventkey",
+			a.cdjb as "cdjb",
+			a.status as "status",
+			a.px as "px",
+			a.twlx as "twlx",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj"
+			from gxrjy_weixin_zdycd a
+			where 1=1
+			and a.status = 'N'
+			<if test="cdjb != null and cdjb != '' ">
+				and a.cdjb = #{cdjb}
+			</if>
+			<if test="pid != null and pid != '' ">
+				and a.pid = #{pid}
+			</if>
+			order by a.px asc,a.tjsj desc
+	</select>
+
+	
+	<select id="findInfo" parameterType="pd" resultType="pd">
+		select	
+			a.id as "id",
+			a.pid as "pid",
+			a.cdmc as "cdmc",
+			a.lx as "lx",
+			a.url as "url",
+			a.eventkey as "eventkey",
+			a.cdjb as "cdjb",
+			a.status as "status",
+			a.px as "px",
+			a.twlx as "twlx",
+			a.tjr as "tjr",
+			a.tjsj as "tjsj",
+			a.xgsj as "xgsj"
+			from gxrjy_weixin_zdycd a
+			where a.id=#{id}
+	</select>
+	
+
+	<insert id="save" parameterType="pd">
+		insert into gxrjy_weixin_zdycd 
+			(id,pid,cdmc,lx,url,eventkey,cdjb,status,px,tjr,tjsj,xgsj)
+			values
+			(#{id},#{pid},#{cdmc},#{lx},#{url},#{eventkey},#{cdjb},#{status},#{px},#{tjr},#{tjsj},#{xgsj})
+	</insert>
+	
+	<update id="update" parameterType="pd">
+		update gxrjy_weixin_zdycd set
+			<if test="cdmc != null and cdmc != '' ">
+				cdmc = #{cdmc},
+			</if>
+			<if test="px != null and px != '' ">
+				px = #{px},
+			</if>
+			<if test="tjr != null and tjr != '' ">
+				tjr = #{tjr},
+			</if>
+				xgsj = #{xgsj}
+				where id=#{id}
+	</update>
+	
+	<delete id="remove" parameterType="pd">
+		delete from gxrjy_weixin_zdycd where id=#{id}
+	</delete>
+	
+	
+	<update id="saveMessage" parameterType="pd">
+		update gxrjy_weixin_zdycd set
+			<if test="lx != null and lx != '' ">
+				lx = #{lx},
+			</if>
+			<if test="url != null and url != '' ">
+				url = #{url},
+			</if>
+			<if test="twlx != null and twlx != '' ">
+				twlx = #{twlx},
+			</if>
+			<if test="tjr != null and tjr != '' ">
+				tjr = #{tjr},
+			</if>
+				xgsj = #{xgsj}
+				where id=#{id}
+	</update>
+	
+	<update id="updatePx" parameterType="pd">
+		update gxrjy_weixin_zdycd set px=#{px},xgsj=#{xgsj} where id=#{id}
+	</update>
+	
+</mapper>
+
+
